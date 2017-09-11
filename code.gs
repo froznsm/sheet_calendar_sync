@@ -4,7 +4,7 @@
  * Script to sync the contents of a GoogleCalender with those of a GoogleSpreadsheet. It has to be formatted as follows: the first three columns are the starttime, endtime and title of a given event.
  * The starttime and endtime should be formatted in compliance with the standard defined by the parseDate() function in this script.
  * The title may be any well-defined String.
- * 
+ *
  * All events in the spreadsheet will be included and updated in the calendar - CalendarEvents not to be found in the spreadsheet will be deleted.
  *
 **/
@@ -27,7 +27,7 @@ function neutonSync(){
  */
 function calendarSync(calendarNumber) {
   if(calendarNumber == -1){
-    var currentCal = CalendarApp.getCalendarById("jkh7o9r6fpku8edq12gsh929qk@group.calendar.google.com");
+    var currentCal = CalendarApp.getCalendarById(null); //@TODO enter you calendar ID here
   } else {
     var allCals = CalendarApp.getAllCalendars();
     var currentCal = allCals[calendarNumber];
