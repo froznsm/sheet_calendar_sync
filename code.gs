@@ -80,8 +80,6 @@ function calendarSync(calendarNumber) {
   var details = "";
   var currentId = null;
 
-  //make array corresponding to importantColumns Array with the relevant data
-
   //Updating the calendar with all the new Events from the Spreadsheet as well as updating already existing ones, should new information exist.
   for(var i = 1; i < data.length; i++){
     currentId = data[i][IdColumn];
@@ -100,16 +98,15 @@ function calendarSync(calendarNumber) {
         if(currentCalenderEventId == currentId){
           eventFound = true;
           Logger.log("event found!");
-         // updateCalendarEvent(start, end, title, location, i, details, data, currentEvent);
           updateCalenderEventArray(importantData, currentEvent);
           break;
         }
       }
     }
-    if(eventFound == false){ //check for start time if event is old @override
+    if(eventFound == false){
       Logger.log("trying to create event!!");
       var newCalEvent = currentCal.createEvent(title, start, end, {location: location});
-      sheet1.getRange(i+1, IdColumn+1).setValue(newCalEvent.getId());  // @override need to change the column selection for inserting the new Ids
+      sheet1.getRange(i+1, IdColumn+1).setValue(newCalEvent.getId());
       newCalEvent.setDescription(details);
       newCalEvent.setTag("booking", "true");
     }

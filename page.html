@@ -41,8 +41,6 @@ function onSyncLaunchSuccess(calendarName){
   var button1 = document.getElementById("myButton");
   button1.innerHTML = "Syncing to "+calendarName;
   button1.onclick= "closeSidebar()";
-
-//  location.reload();
   setTimeout(closeSidebar, 5000);
 }
 
@@ -101,6 +99,5 @@ function closeSidebar(){
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 </style>
