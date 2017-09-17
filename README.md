@@ -12,4 +12,3 @@ The current sheet has to be named the current year to be synced and the `Datum`/
 The script creates a dropdown menu in the menu bar from which you can either select a Google Calendar you have put into the code or open the sidebar, from which you can select another one of your calendars.
 ### Other events in the same calendar
 Events you create in the web UI or from your phone in the same Google Calendar will be ignored by the sync mechanism.
-YES
