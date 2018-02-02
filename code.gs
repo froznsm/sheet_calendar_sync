@@ -34,7 +34,7 @@ function neutonSync(){
  */
 function calendarSync(calendarNumber) {
   if(calendarNumber == -1){
-    var currentCal = CalendarApp.getCalendarById("eobqjuirgupt3u8jatknb5hos8@group.calendar.google.com");
+    var currentCal = CalendarApp.getCalendarById(YOUR CALENDAR ID);
   } else {
     var allCals = CalendarApp.getAllCalendars();
     var currentCal = allCals[calendarNumber];
